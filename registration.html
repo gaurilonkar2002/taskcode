@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/plan\ blue.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function myfunc(){
+
+            var a = document.getElementById("name").value;
+            var b = document.getElementById("email").value;
+            var c = document.getElementById("phone").value;
+            if(a.length<3){
+                document.getElementById("message").innerHTML="**Name must be greater than 3";
+                return false;
+            }
+            if(a.length>20){
+                document.getElementById("message").innerHTML="**Name must be less than 20";
+                return false;
+            }
+            if(b.length>30){
+                document.getElementById("mail").innerHTML="** Write valid email";
+                return false;
+            }
+            if(c.length>10){
+                document.getElementById("number").innerHTML="** Phone should be 10 digit ";
+                return false;
+            }
+
+           
+
+        }
+    </script>
+    
+    <main>
+        <h3>STUDENT SURVEY FORM</h3>
+        <form action="registration.html" onsubmit="return myfunc()">
+        <br>
+        <h4>Name of Student:</h4>
+        <input type="text"placeholder="username"id="name" required style="width: 100%;"><span id="message" style="color: red;"></span>
+        <br>
+        <h4>Email of Student:</h4>
+        <input type="email"placeholder="email"id="email"required style="width: 100%;"><span id="mail" style="color: red;"></span>
+        <br>
+        <h4>Phone number:</h4>
+        <input type="text"placeholder="phone  no"id="phone"required style="width: 100%;"><span id="number" style="color: red;"></span>
+        <br>
+       
+        <h4>Gender:</h4>
+        <label for="1">
+        <input type="radio"values="male"name="gender"id="male">Male
+    </label>
+        <label for="2"><input type="radio"values="female"name="gender"id="female">Female
+        </label>
+        <label for="3"><input type="radio"values="other"name="gender"id="other">Other
+        </label>
+        <div class="Enrolled">
+        <h4 style="margin-top: 20px;">Enrolled Course:</h4>
+        <label for="Web Development">
+            <input type="checkbox" name="Web Development" id="15">Web Development
+        </label>
+        <br>
+        <label for="DevOps">
+            <input type="checkbox" name="DevOps" id="16">DevOps
+        </label>
+        <br>
+        <label for="Microservice">
+            <input type="checkbox" name="Microservice" id="17">Microservice
+        </label>
+        <br>
+        <label for="full stack development">
+            <input type="checkbox" name="full stack development" id="18">full stack development
+        </label>
+        <br>
+        <label for="UI/UX Designing">
+            <input type="checkbox" name="UI/UX Designing" id="19">UI/UX Designing
+        </label>
+        <br>
+        <label for="Cloud Computing">
+            <input type="checkbox" name="Cloud Computing" id="20">Cloud Computing
+        </label>
+    </div>
+        <br>
+       
+       <h4 style="margin-top: 20px;"> Please Select the Language:</h4>
+       <select name="laguage" id="lang" style="width:500px;margin-top: 25px;
+       margin-bottom: 25px; height: 30px;background-color:rgb(44, 10, 99); border-radius: 2px; color:white;">
+        <option value="english" disable hidden selected>Enter language</option>
+        <option value="english">English</option>
+        <option value="marati">Marathi</option>
+        <option value="hindi">Hindi</option>
+        <option value="french">French</option>
+       </select>
+       <br>
+       <h4 style="margin-top: 20px;">Your Expectations From Us:</h4>
+       <textarea name="About" id="1005"placeholder="Write Your Expectations from Us......" cols="30" rows="10"style=" color:white; width:500px; background-color:rgb(44, 10, 99); border-radius:2px ;">
+
+       </textarea>
+       <br>
+       
+       <input type="submit" name="register"  style="width: 100%; height:40px ; color: rgb(5, 49, 71); font-weight: bold;background-color: rgb(215, 48, 48);">
+    
+        
+        </form>
+    </main>
+</body> 
+</html>
+
+
